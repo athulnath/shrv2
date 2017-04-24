@@ -16,9 +16,9 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', function() {
-        return View('welcome');
+        return redirect("/dashboard");
     });
 
 });
 
-Route::get('/home', 'HomeController@index');
+Route::get('/dashboard', 'DashboardController@index');
